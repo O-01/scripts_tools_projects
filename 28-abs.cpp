@@ -1,10 +1,8 @@
 #include <cstdio>
 
-
 int absolute_value(int x) {
     return x < 0 ? x * -1 : x;
 }
-
 
 int main() {
     int my_num = 12;
