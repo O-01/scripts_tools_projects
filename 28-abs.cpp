@@ -1,11 +1,12 @@
-#include <cstdio>
+#include <iostream>
 
-int absolute_value(int x) {
-    return x < 0 ? x * -1 : x;
+template <typename T>
+T abs(T x) {
+	return x < 0 ? x * -1 : x;
 }
 
-int main() {
-    int my_num = 12;
-
-    printf("The absolute value of %d is %d.\n", my_num, absolute_value(my_num));
+int main(void) {
+	int neg = -144;
+	std::cout << "The absolute value of " << neg << "is " << abs(neg) << std::endl;
+	return 0;
 }
