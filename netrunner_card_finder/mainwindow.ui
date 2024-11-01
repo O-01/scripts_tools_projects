@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>890</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>890</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Netrunner Card Finder</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="locale">
+    <locale language="English" country="UnitedStates"/>
+   </property>
+   <widget class="QListWidget" name="cardList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>341</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="currentRow">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resetButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>730</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="text">
+     <string>Reset Search</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="dropFormat">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>570</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="maxVisibleItems">
+     <number>16</number>
+    </property>
+    <property name="placeholderText">
+     <string>[DISABLED] FORMAT</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>[FORMAT]</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Eternal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Random Access Memories (RAM)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Snapshot</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Standard</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Startup</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>System Gateway</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Casual</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="dropSet">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>610</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="maxVisibleItems">
+     <number>16</number>
+    </property>
+    <property name="placeholderText">
+     <string>[DISABLED] SET</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="dropType">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>850</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="maxVisibleItems">
+     <number>16</number>
+    </property>
+    <property name="placeholderText">
+     <string>TYPE</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>TYPE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Identity</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Program</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hardware</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Resource</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Event</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Agenda</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Asset</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ice</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Operation</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Upgrade</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="dropFaction">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>810</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="maxVisibleItems">
+     <number>16</number>
+    </property>
+    <property name="placeholderText">
+     <string>FACTION</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>FACTION</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Anarch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Criminal</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Shaper</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Adam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Apex</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sunny Lebeau</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jinteki</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Haas-Bioroid</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>NBN</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Weyland Consortium</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neutral</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="dropSide">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>770</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="maxVisibleItems">
+     <number>4</number>
+    </property>
+    <property name="placeholderText">
+     <string>SIDE</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>SIDE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Corp</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Runner</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>631</width>
+      <height>871</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>929</width>
+       <height>869</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>621</width>
+        <height>871</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout" rowstretch="0" rowminimumheight="0" columnminimumwidth="0">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <property name="spacing">
+        <number>6</number>
+       </property>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>650</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>[DISABLED] Search by name.. [PRESS RETURN]</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="searchField">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QTextEdit::NoWrap</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Search by card name..</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
