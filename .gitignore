@@ -1,1 +1,5 @@
 vgcore*
+*~
+test_*
+build
+.vscode
