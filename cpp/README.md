@@ -1,5 +1,5 @@
 # C++
-### Files
+### Contents
 **Item** | **Purpose**
 --- | ---
 **fizzbuzz_odd** | Contains uncommon approach to FizzBuzz challenge
