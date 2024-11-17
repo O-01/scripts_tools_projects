@@ -24,6 +24,7 @@ class Solution {
 public:
 	int lengthOfLastWord(std::string s) {
 		int len = 0, idx = s.length() - 1;
+
 		while (s[idx] && s[idx] == ' ')
 			--idx;
 		while (idx >= 0 && s[idx] && s[idx] != ' ')

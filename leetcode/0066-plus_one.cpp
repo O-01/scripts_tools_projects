@@ -30,6 +30,7 @@ class Solution {
 public:
 	std::vector<int> plusOne(std::vector<int>& digits) {
 		int pos = digits.size() - 1, carry = 0;
+
 		if (++digits[pos] < 10)
 			return digits;
 		for (digits[pos--] %= 10, carry = 1; pos >= 0 && carry; digits[pos--] %= 10)

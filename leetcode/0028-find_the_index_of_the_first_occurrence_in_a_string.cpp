@@ -20,6 +20,7 @@ class Solution {
 public:
 	int strStr(std::string haystack, std::string needle) {
 		int len_haystack = haystack.length(), len_needle = needle.length();
+
 		if (len_needle > len_haystack)
 			return -1;
 		for (int idx = 0; idx < (len_haystack + 1) - len_needle; ++idx)

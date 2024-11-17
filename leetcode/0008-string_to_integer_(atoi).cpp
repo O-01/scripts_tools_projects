@@ -67,6 +67,7 @@ class Solution {
 public:
 	int myAtoi(std::string s) {
 		int idx = 0, out = 0, sign = 1, begin = 0;
+
 		for (int idx = 0; s[idx]; ++idx) {
 			if (!begin && s[idx] == ' ')
 				continue;

@@ -19,9 +19,10 @@
 class Solution {
 public:
 	bool isPalindrome(int x) {
+		long rev = 0;
+
 		if (x < 0)
 			return false;
-		long rev = 0;
 		for (int n = x, mod = 0; n; n /= 10) {
 			mod = n % 10;
 			rev = rev * 10 + mod;
