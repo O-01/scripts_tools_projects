@@ -1,6 +1,3 @@
-#include <climits>
-#include <string>
-
 // 8. String to Integer (atoi)
 // Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
 
@@ -62,6 +59,9 @@
 // Constraints:
 //     0 <= s.length <= 200
 //     s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
+
+#include <climits>
+#include <string>
 
 class Solution {
 public:
