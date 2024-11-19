@@ -20,9 +20,10 @@
 class Solution {
 public:
 	int reverse(int x) {
+		int rev = 0, sign = 1;
+
 		if (x == INT_MIN)
 			return 0;
-		int rev = 0, sign = 1;
 		if (x < 0)
 			sign = -(sign), x = -(x);
 		for (; x; x /= 10) {

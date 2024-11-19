@@ -25,6 +25,7 @@ class Solution {
 public:
     int maxArea(std::vector<int>& height) {
         int max_area = 0;
+
         for (int begin = 0, end = height.size() - 1, area = 0; begin < end;) {
             area = std::min(height[begin], height[end]) * (end - begin);
             if (area > max_area)

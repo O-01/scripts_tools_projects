@@ -23,6 +23,7 @@ class Solution {
 public:
 	int climbStairs(int n) {
 		int counts[46] = {0};
+
 		counts[1] = 1;
 		counts[2] = 2;
 		for (int iter = 3; iter < n; ++iter)

@@ -25,11 +25,13 @@ public:
 	std::vector<std::string> letterCombinations(std::string digits) {
 		if (digits.empty())
 			return {};
+
 		std::vector<std::string> combos = {""}, add, letters = {"",
 			"", "abc", "def",
 			"ghi", "jkl", "mno",
 			"pqrs", "tuv", "wxyz"
 		};
+
 		for (char digit: digits) {
 			add = {};
 			for (std::string combo: combos)

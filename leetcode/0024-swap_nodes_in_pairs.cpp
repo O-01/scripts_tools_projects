@@ -22,15 +22,7 @@
 
 /**
  * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
  */
-
 struct ListNode {
 	int val;
 	ListNode *next;
@@ -44,7 +36,9 @@ public:
 	ListNode* swapPairs(ListNode* head) {
 		if (!head || !head->next)
 			return head;
+
 		ListNode *tmp = head, *next_pair = tmp->next->next;
+
 		if (tmp == head)
 			head = tmp->next;
 		for (; tmp && tmp->next; tmp = next_pair) {
